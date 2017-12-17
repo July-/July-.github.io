@@ -1,0 +1,11 @@
+<table valign="top" ng-show="ctrl2.foundItems.length" class="table table-responsive">
+	<tr><th>Name</th><th>Short Name</th><th>Description</th><th></th></tr>
+	<tr ng-repeat="item in ctrl2.foundItems">
+		<td bgcolor="#ececff">{{ item.name }}</td>
+    <td bgcolor="#bfc7ff">{{item.short_name}}</td>
+		<td bgcolor="#b4bff5">{{ item.description }}</td>
+    <td bgcolor="#8699f9"><button class="btn btn-default" ng-click="ctrl2.onRemove({index: $index});">Don’t want this one</button></td>
+  </tr>
+</table>
+<div class="error" ng-show="ctrl2.showErrorMsg">Nothing found</div>
+<div class="error" ng-show="ctrl2.searchError">Failed to load menu. Try later.</div>
